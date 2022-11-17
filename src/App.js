@@ -8,7 +8,7 @@ const App = () => {
   const [todos, setTodos] = useState([
     { text: "Meditate for 30 minutes", id: "g1" },
     { text: "Clean the floors", id: "g2" },
-  ]);
+  ]);             
 
   const addTodoHandler = (enteredText) => {
     setTodos((prevTodos) => {
