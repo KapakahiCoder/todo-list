@@ -55,13 +55,18 @@ const TodoInput = (props) => {
       return;
     }
     props.onAddTodo(enteredValue);
+    setEnteredValue("");
   };
 
   return (
     <form onSubmit={formSubmitHandler}>
       <FormControl className={!isValid && "invalid"}>
         <label>Todo List</label>
-        <input type="text" onChange={todoInputChangeHandler} />
+        <input
+          type="text"
+          value={enteredValue}
+          onChange={todoInputChangeHandler}
+        />
       </FormControl>
       <Button type="submit">Add Todo</Button>
     </form>
